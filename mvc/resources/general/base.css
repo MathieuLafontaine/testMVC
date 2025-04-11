@@ -1,0 +1,28 @@
+/*Style general de la page*/
+/*Interligne------------------------*/
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.15;
+}
+
+p {
+  line-height: 1.35;
+}
+
+body {
+  background-color: #f4f3f2;
+}
+
+/*Structure pour les éléments paragraphes----*/
+
+strong,
+p {
+  display: block;
+}
+
+strong,
+p {
+  max-width: 50ch;
+}

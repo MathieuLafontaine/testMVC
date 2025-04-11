@@ -1,0 +1,146 @@
+/*Style general de la page*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: #000;
+}
+
+body,
+html {
+  height: 100%;
+}
+html {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-kerning: normal;
+  font-size: 16px;
+}
+/*Interligne------------------------*/
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.15;
+}
+
+strong {
+  line-height: 1.35;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f3f2;
+}
+
+main {
+  padding: 15px;
+  flex-basis: 100%;
+}
+
+/*rhythme vertical*/
+p,
+strong,
+textarea,
+button,
+table,
+label,
+input,
+.lien,
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 24px;
+}
+
+/*Structure pour les éléments paragraphes, td et strong----*/
+
+table {
+  border-collapse: collapse;
+}
+
+strong,
+p,
+td {
+  max-width: 50ch;
+}
+
+/*Styling des tables*/
+
+td,
+th {
+  padding: 5px;
+  border: solid 1px black;
+}
+
+th {
+  background-color: lightgray;
+}
+
+/*Styling de la navigation*/
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: lightpink;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: row;
+  list-style: none;
+  gap: 20px;
+}
+
+nav * {
+  font-size: 1.25rem;
+}
+
+nav ul {
+  padding: 10px;
+}
+
+nav ul a {
+  text-transform: uppercase;
+  padding: 10px 20px;
+}
+
+nav ul a:hover {
+  background-color: rgb(155, 105, 114);
+  color: white;
+}
+
+footer {
+  position: relative;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-flow: column;
+}
+
+input,
+textarea {
+  max-width: 50ch;
+}
+
+button,
+input[type="submit"] {
+  cursor: pointer;
+  background-color: lightblue;
+  line-height: 1.35;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  color: white;
+  background-color: rgb(109, 148, 161);
+}
+
+td a,
+.lien {
+  text-decoration: underline;
+}
