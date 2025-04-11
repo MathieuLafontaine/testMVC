@@ -1,5 +1,6 @@
 <?php
 
+//controller pour affichage de la page index
 function forum_controller_index()
 {
     require_once(MODEL_DIR . "/forum.php");
@@ -7,11 +8,13 @@ function forum_controller_index()
     render('forum/index.php', $forums);
 };
 
+//controller pour l'affichage de la page create de forum
 function forum_controller_create()
 {
     return render('forum/create.php');
 };
 
+//controller pour l'insertion de donnee dans la table forum
 function forum_controller_store($request)
 {
     require_once(MODEL_DIR . "/forum.php");
@@ -21,6 +24,7 @@ function forum_controller_store($request)
     header('location:?controller=forum&function=show&id=' . $forum);
 }
 
+//affichage de la page show
 function forum_controller_show($request)
 {
     $id = $request['id'];
@@ -35,6 +39,7 @@ function forum_controller_show($request)
     }
 }
 
+//affichage de la page edit
 function forum_controller_edit($request)
 {
 
@@ -50,6 +55,7 @@ function forum_controller_edit($request)
     }
 }
 
+//modification des donnees deja dans le tableau
 function forum_controller_update($request)
 {
     require_once(MODEL_DIR . "/forum.php");
@@ -61,6 +67,7 @@ function forum_controller_update($request)
     }
 }
 
+//deletion de donnees dans le tableau
 function forum_controller_delete($request)
 {
     $id = $request['id'];

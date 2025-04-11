@@ -1,5 +1,6 @@
 <?php
 
+//controller pour affichage de la page index
 function user_controller_index()
 {
     require_once(MODEL_DIR . "/user.php");
@@ -7,11 +8,13 @@ function user_controller_index()
     render('user/index.php', $users);
 };
 
+//controller pour l'affichage de la page create de user
 function user_controller_create()
 {
     return render('user/create.php');
 };
 
+//controller pour l'insertion de donnee dans la table user
 function user_controller_store($request)
 {
     require_once(MODEL_DIR . "/user.php");
@@ -20,6 +23,7 @@ function user_controller_store($request)
     header('location:?controller=user&function=show&id=' . $user);
 }
 
+//affichage de la page show
 function user_controller_show($request)
 {
     $id = $request['id'];
@@ -33,6 +37,7 @@ function user_controller_show($request)
     }
 }
 
+//affichage de la page edit
 function user_controller_edit($request)
 {
 
@@ -48,6 +53,7 @@ function user_controller_edit($request)
     }
 }
 
+//modification des donnees deja dans le tableau
 function user_controller_update($request)
 {
     require_once(MODEL_DIR . "/user.php");
@@ -59,6 +65,7 @@ function user_controller_update($request)
     }
 }
 
+//deletion de donnees dans le tableau
 function user_controller_delete($request)
 {
     $id = $request['id'];
